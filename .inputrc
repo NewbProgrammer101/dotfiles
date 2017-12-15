@@ -1,0 +1,4 @@
+set bell-style none
+set visible-stats on
+set echo-control-characters off
+set completion-query-times 0

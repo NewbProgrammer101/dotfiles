@@ -1,0 +1,3 @@
+set ssl_force_tls=yes
+set ssl_starttls=yes
+set smtp_url="smtps://countolaf17@gmail.com:password@smtp.gmail.com:465/"

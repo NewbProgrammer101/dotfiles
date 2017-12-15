@@ -1,0 +1,6 @@
+mailboxes = =INBOX \
++Sent \
++Trash \
++INBOX \
++Drafts \
++[Gmail].All Mail

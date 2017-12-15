@@ -1,0 +1,7 @@
+set mbox_type=Maildir
+set folder = '~/Mail/countolaf17@gmail.com'
+set mbox='+[Gmail].All Mail'
+set spoolfile='+INBOX'
+set record='~/Mail/countolaf17@gmail.com/Sent'
+set postponed='+[Gmail].Drafts'
+set sendmail = "/usr/bin/msmtp"

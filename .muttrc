@@ -1,0 +1,26 @@
+# Thank you khay from Gentoo Forums
+set header_cache="~/.mutt/cache/headers"
+set message_cachedir="~/.mutt/cache/bodies"
+set certificate_file="~/.mutt/certificates"
+set move="no"
+
+source ~/.mutt/inc/pgp
+source ~/.mutt/inc/colors
+source ~/.mutt/accounts/countolaf17@gmail.com/imap
+source ~/.mutt/accounts/countolaf17@gmail.com/ident
+source ~/.mutt/accounts/countolaf17@gmail.com/smtp
+source ~/.mutt/accounts/countolaf17@gmail.com/mailboxes
+
+# Other
+set tmpdir="~/.mutt/tmp"
+set ssl_use_tlsv1="yes"
+set alias_format = '%4n %2f %t %-10a   %r'
+set autoedit="no"
+set resume_draft_files="yes"
+set resume_edited_draft_files="yes"
+set use_ipv6="no"
+set sort="date"
+set sort_alias="alias"
+set sort_aux="date"
+set sort_browser="date"
+set sort_re="yes"

@@ -1,0 +1,617 @@
+# Happy hacking
+
+################################################
+# -------- Player preferences
+################################################
+OPTIONS=name:Xaleth
+OPTIONS=dogname:Spike
+OPTIONS=catname:Opal
+OPTIONS=horsename:Derpy
+
+OPTIONS=mail
+
+################################################
+# -------- EASE OF PLAY
+################################################
+OPTIONS=pickup_types:$
+OPTIONS=!autopickup
+OPTIONS=!autoquiver
+OPTIONS=!autodig
+OPTIONS=!autoopen
+OPTIONS=prayconfirm
+OPTIONS=showexp
+OPTIONS=time
+OPTIONS=silent
+OPTIONS=selectsaved
+OPTIONS=news
+
+################################################
+# -------- SEE THINGS BETTER!
+################################################
+OPTIONS=hilite_pet
+OPTIONS=lit_corridor
+# Show out-of-sight areas of lit rooms
+OPTIONS=dark_room
+
+
+
+################################################
+# -------- Disabling annoying/inconvenient options
+################################################
+OPTIONS=!cmdassist
+OPTIONS=!help
+OPTIONS=!legacy
+OPTIONS=!sparkle
+#OPTIONS=pickup_burden:unencumbered
+#OPTIONS=sortloot:full
+OPTIONS=scores:10 top/3 around/own
+OPTIONS=noextmenu
+# standout: Uses standout mode (reverse video) for displaying "--More--".
+# Boolean option, defaults to FALSE. Can be set in-game. Persistent.
+OPTIONS=nostandout 
+OPTIONS=nouse_darkgray
+
+################################################
+# -------- Files/Saves
+################################################
+## Allow saving and loading bones files.
+OPTIONS=bones
+
+
+################################################
+# -------- STATUS COLORS
+################################################
+# OPTIONS=statuscolors # 3.6 N/A
+# STATUSCOLOR=HP%99:green,HP%75:brown,HP%50:red,HP%25:orange
+#  prayer threshold (<= 1/7 of maxHP) (stth++)
+# STATUSCOLOR=HP%14:lightmagenta&inverse
+# STATUSCOLOR=Pw%99:cyan&bold,Pw%75:cyan,Pw%50:magenta,Pw%25:magenta&bold
+# STATUSCOLOR=Satiated:green,Hungry:brown,Weak:red,Fainting:orange&inverse,Fainted:orange&inverse,Starved:orange&inverse
+# STATUSCOLOR=Burdened:orange,Stressed:orange,Strained:orange,Overtaxed:orange,Overloaded:orange
+# STATUSCOLOR=Blind:red,Stun:brown,Conf:brown,Hallu:brown
+# STATUSCOLOR=Ill:red&inverse,FoodPois:red&inverse,Slime:red&inverse
+
+
+################################################
+# -------- GRAPHICS OPTIONS
+################################################
+OPTIONS=color
+
+OPTIONS=msg_window:single
+OPTIONS=msghistory:1000
+OPTIONS=vary_msgcount:3
+
+OPTIONS=map_mode:ascii10x18
+
+OPTIONS=font_message:Arial,font_size_message:20,align_message:top
+OPTIONS=font_menu:Arial,font_size_menu:20
+OPTIONS=font_text:Courier New,font_size_text:20
+OPTIONS=font_status:Courier New,font_size_status:20
+
+# this displays menus in a white font over black background
+OPTIONS=windowcolors:status white/#000001 message white/#000001 menu white/#000001
+
+## Change default glyphs
+OPTIONS=boulder:0
+SYMBOLS=S_ghost:X
+SYMBOLS=S_golem:8
+
+################################################
+# -------- MENUCOLORS
+################################################
+OPTIONS=menucolors
+MENUCOLOR=" !C"=white
+MENUCOLOR=" !B"=white
+MENUCOLOR=" !UC"=white
+MENUCOLOR=" uncursed| UC?($| )"=white
+MENUCOLOR=" \([-0-9]+:[-0-9]+\)"=white #nethack doesn't display "uncursed" if charges are known
+MENUCOLOR=" [+-][0-9]"=white
+MENUCOLOR=" blessed| B($| )"=cyan
+
+MENUCOLOR="loadstone\|wand \(of\|called\) cancellation"=underline
+MENUCOLOR="Amulet of Yendor named"=magenta                           # color only the real Amulet
+
+
+MENUCOLOR=" holy water"=cyan&bold
+MENUCOLOR=" blessed clear potion"=cyan&bold
+MENUCOLOR=" blessed potions? called water"=cyan&bold
+MENUCOLOR=" clear potions? named (holy|blessed|B)($| )"=cyan&bold
+MENUCOLOR=" potions? of water named (holy|blessed|B)($| )"=cyan&bold
+MENUCOLOR=" potions? called water named (holy|blessed|B)($| )"=cyan&bold
+MENUCOLOR=" unholy water"=orange
+MENUCOLOR=" cursed clear potion"=orange
+MENUCOLOR=" cursed potions? called water"=orange
+MENUCOLOR=" potions? called water named (unholy|cursed|C)($| )"=orange
+
+#| Fully enchanted items (or possibly at max) |
+MENUCOLOR="\+4"=yellow
+MENUCOLOR="\+5"=yellow
+MENUCOLOR="\+6"=yellow
+MENUCOLOR="\+7"=yellow
+
+# vegan
+MENUCOLOR="(food |cram |K-|C-)ration|gunyoki"=green&bold
+MENUCOLOR="lembas wafer|melon|carrot|tin .* spinach"=green&bold
+MENUCOLOR=" oranges?( named.*)?$"=green&bold # avoid coloring orange DSM
+MENUCOLOR=" pears?( named.*)?$"=green&bold # avoid coloring pearl rings
+MENUCOLOR=" apple|banana|kelp|eucalyptus|garlic|wolfsbane"=green&bold
+MENUCOLOR=" slime mold| brain"=green&bold  ## YOUR FRUIT HERE
+MENUCOLOR="(tin of )?(gelatinous cube|acid blob|quivering blob)( corpse)?"=green&bold
+MENUCOLOR="(tin of )?(blue|spotted|ochre) jelly( corpse)?"=green&bold
+MENUCOLOR="(tin of )?lichen|shrieker|violet fungus|(brown|yellow|green|red) mold( corpse)?"=green&bold
+
+# vegetarian
+MENUCOLOR="egg|pancake|fortune cookie|candy bar|royal jelly|cream pie|candle"=green
+MENUCOLOR="(tin of )?brown pudding|gray ooze( corpse)?"=green
+
+###########
+# GOODIES #
+###########
+MENUCOLOR="wand .* wish(ing)?($| )"=magenta
+MENUCOLOR="magic marker"=magenta
+MENUCOLOR="wand .* tele(port(ation)?)?($| )"=magenta
+MENUCOLOR="wand .* polymorph"=magenta
+MENUCOLOR="wand .* death"=magenta 
+MENUCOLOR="ring .* conf(lict)?"=magenta
+MENUCOLOR="c(o|hi)ckatrice (corpse|egg)"=magenta
+MENUCOLOR="egg .* cockatrice"=magenta
+# Bugfix: 'scroll.*', not 'scroll .*': Otherwise the coloring disappears on stacks.
+#MENUCOLOR="scroll.* genocide($| )"=magenta                                     
+#MENUCOLOR="scroll.* charging($| )"=magenta                                     
+#MENUCOLOR="scroll.* identify($| )"=magenta
+
+# Ascension kit/armor
+MENUCOLOR=" dragon scale mail "=yellow
+MENUCOLOR=" cloak of magic resistance "=yellow
+MENUCOLOR=" MR "=yellow
+MENUCOLOR=" reflection "=yellow
+MENUCOLOR=" #asc"=yellow
+
+# unidentified magic armor
+MENUCOLOR="piece of cloth|opera cloak|ornamental cope|tattered cape"=magenta
+MENUCOLOR="plumed helmet|etched helmet|crested helmet|visored helmet"=magenta
+MENUCOLOR="(old|padded|riding|fencing) gloves"=magenta 
+MENUCOLOR="(mud|buckled|riding|snow|hiking|combat|jungle) boots"=magenta 
+
+
+######################
+# Royally Awesome
+######################
+MENUCOLOR=" stethoscope"=purple&bold
+MENUCOLOR=" bag .* holding"=purple&bold
+# MENUCOLOR=" luck(stone)?($| )"=purple&bold
+MENUCOLOR=" luck(stone)?"=purple&bold
+MENUCOLOR=" gain level"=purple&bold
+MENUCOLOR=" tinning kit"=purple&bold
+MENUCOLOR=" ring .* (FA|free action)($| )"=purple&bold
+MENUCOLOR=" ring .* (TC|teleport control)($| )"=purple&bold
+MENUCOLOR=" ring .* lev(itation)?($| )"=purple&bold
+# MENUCOLOR=" unicorn horn[^[]*$"=purple&bold
+MENUCOLOR="a +.? unicorn horn"=lightblue&bold
+MENUCOLOR="a unicorn horn"=lightblue&bold
+
+
+######################
+# HEALING & DEFENSE
+######################
+# MENUCOLOR=" healing"=lightblue
+# MENUCOLOR=" extra healing"=lightblue
+# MENUCOLOR=" full healing"=lightblue&bold
+# MENUCOLOR=" amulet .* (life ?saving|LS)($| )"=lightblue&bold
+# MENUCOLOR=" ring .* reg(eneration)?($| )"=lightblue
+
+
+#############
+# ARTIFACTS #
+#############
+#unaligned
+MENUCOLOR=" (Dragonbane|Fire Brand|Frost Brand|Ogresmasher|Trollsbane|Werebane)"=lightgreen
+
+#lawful normal, quest
+MENUCOLOR=" (Demonbane|Excalibur|Grayswandir|Snickersnee|Sunsword)"=lightgreen
+MENUCOLOR=" (Orb of Detection|Sceptre of Might|Magic Mirror of Merlin|Mitre of Holiness|Tsurugi of Muramasa)"=lightgreen
+
+#neutral normal, quest
+MENUCOLOR=" (Cleaver|Giantslayer|Magicbane|Mjollnir|Vorpal Blade)"=lightgreen
+MENUCOLOR=" (Heart of Ahriman|Staff of Aesculapius|Eyes of the Overworld|Platinum Yendorian Express Card|Orb of Fate|Eye of the Aethiopica)"=lightgreen
+
+#chaotic normal, quest
+MENUCOLOR=" (Grimtooth|Orcrist|Sting|Stormbringer)"=lightgreen
+MENUCOLOR=" (Longbow of Diana|Master Key of Thievery)"=lightgreen
+
+#invocation items
+MENUCOLOR=" (Bell of Opening|silver bell|Candelabrum of Invocation|candelabrum|Book of the Dead|papyrus spellbook)"=magenta&bold
+# MENUCOLOR=" (Bell of Opening|silver bell|Candelabrum of Invocation|candelabrum|Book of the Dead|papyrus spellbook)"=orange
+
+#raison d'etre
+#the whole reason you're playing this stupid game
+# MENUCOLOR=" Amulet of Yendor named"=green&bold&underline
+MENUCOLOR=" Amulet of Yendor named"=blink&orange
+
+##################
+# CURSED GOODIES #
+##################
+#MENUCOLOR=" cursed.* bag .* holding"=red&bold
+MENUCOLOR=" cursed.* luck(stone)?($| )"=red&bold
+MENUCOLOR=" cursed.* unicorn horn"=red&bold
+MENUCOLOR=" cursed.* (Bell of Opening|silver bell|Candelabrum of Invocation|candelabrum|Book of the Dead|papyrus spellbook)"=red&bold
+
+#############
+# BAD STUFF #
+#############
+MENUCOLOR=" load(stone)?($| )"=blue&underline
+
+
+##############################
+# WATCH OUT, BAG OF HOLDING! #
+##############################
+# even if unidentified:
+MENUCOLOR="bag($| named)"=red&underline
+MENUCOLOR=" bag .* holding"=red&underline
+MENUCOLOR=" bag .* tricks"=red&underline
+MENUCOLOR=" bag .* holding named MI.*"=magenta
+MENUCOLOR="cursed.* bag .* holding"=red&underline
+MENUCOLOR="bag .* holding named.* C($| )"=red&underline
+MENUCOLOR=" wand .*[^!]canc"=red&underline
+MENUCOLOR=" wand .* msg_van"=red&underline
+MENUCOLOR=" wand called .* vanish( .*)?$"=red&underline
+MENUCOLOR="(^|aluminum |balsa |brass |copper |crystal |curved |ebony | forked |glass |hexagonal |iridium |iron |jeweled |long |maple |marble |oak |pine |platinum |runed |short |silver |spiked |steel |tin |uranium |zinc )wand($| named)"=red&underline 
+
+
+################
+# SHINY THINGS #
+################
+MENUCOLOR=" lamp"=yellow
+MENUCOLOR=" candle"=yellow
+MENUCOLOR=" magic lamp|lamp .* magic"=magenta
+MENUCOLOR=" gold piece"=yellow
+MENUCOLOR=" valuable"=brown
+MENUCOLOR=" gems? .* hard"=yellow
+
+#soft gems
+MENUCOLOR=" ([0-9]+|an?|gems? .*) (uncursed |cursed |blessed )?(dilithium|opal|garnet|jasper|agate|jet|obsidian|jade|citrine|chrysoberyl|amber|amethyst|fluorite|turquoise)(e?s)?( stones?| gems?| crystals?)?( named .*)?$"=brown
+
+#hard gems
+MENUCOLOR=" ([0-9]+|an?|gems?.*) (uncursed |cursed |blessed )?(diamond|rub(y|ies)|jacinth|sapphire|black opal|emerald|topaz|aquamarine)(e?s)?( stones?| gems?)?( named .*)?$"=yellow
+
+
+#######################
+# SPELL FAILURE RATES #
+#######################
+MENUCOLOR=" 0%"=white
+MENUCOLOR=" [1-9]%"=cyan
+MENUCOLOR=" [12][0-9]%"=cyan
+MENUCOLOR=" [3-6][0-9]%"=yellow
+MENUCOLOR=" 7[0-5]%"=yellow
+MENUCOLOR=" 7[6-9]%"=orange
+MENUCOLOR=" 8[0-9]%"=orange
+MENUCOLOR=" 9[0-9]%"=red
+MENUCOLOR=" 100%"=red
+
+###################
+# FORGOTTEN SPELL # thanks, Stevie
+###################
+MENUCOLOR="[a-zA-Z] - [a-zA-Z ]+ [0-9]\*   [a-z]+ +[0-9]+%"=magenta
+
+
+############
+# #ENHANCE # thanks itsblah
+############
+MENUCOLOR="^ +[a-z -]+ +\[(Unskilled|Basic|Skilled|Expert|Master|Grand Master)\]$"=none           # normal
+MENUCOLOR="^ *[a-z] - +[a-z -]+ +\[(Unskilled|Basic|Skilled|Expert|Master|Grand Master)\]$"=white # ready to enhance
+MENUCOLOR="^ +\* +[a-z -]+ +\[(Unskilled|Basic|Skilled|Expert|Master|Grand Master)\]$"=white      # enhanceable if more skill slots
+MENUCOLOR="^ +# +[a-z -]+ +\[(Unskilled|Basic|Skilled|Expert|Master|Grand Master)\]$"=none        # enhanceable if more potential
+
+################
+# FORCE COLORS #
+################
+# Some of these are subject to change !
+
+MENUCOLOR="\{R\}"=red
+MENUCOLOR="\{B\}"=blue
+MENUCOLOR="\{C\}"=cyan
+MENUCOLOR="\{G\}"=green
+MENUCOLOR="\{Y\}"=yellow
+MENUCOLOR="\{[MP]\}"=magenta
+MENUCOLOR="\{O\}"=orange
+MENUCOLOR="\{W\}"=white
+MENUCOLOR="\{L\}"=black
+MENUCOLOR="\{y\}"=gray
+MENUCOLOR="\{g\}"=lightgreen
+MENUCOLOR="\{b\}"=lightblue
+MENUCOLOR="\{[mp]\}"=lightmagenta
+MENUCOLOR="\{c\}"=lightcyan
+MENUCOLOR="\{N\}"=none
+MENUCOLOR="\{X\}"=bold
+MENUCOLOR="\{x\}"=dim
+MENUCOLOR="\{U\}"=underline
+MENUCOLOR="\{I\}"=inverse
+MENUCOLOR="\{K\}"=blink
+MENUCOLOR="\{R\}\{U\}"=red&underline
+MENUCOLOR="\{RU\}"=red&underline
+
+########################
+# LOOT/APPLY CONTAINER #
+########################
+MENUCOLOR=" is empty. Do what?"=none
+MENUCOLOR="Put something into .*"=none
+MENUCOLOR="Take something out of .*"=none
+
+
+################################################
+# -------- MESSAGE OPTIONS
+################################################
+
+################
+##
+##  Ignored messages
+##
+###############
+## displacing pets. hide the message.
+MSGTYPE=hide "You swap places with your .*"
+MSGTYPE=hide "You swap places with .*"
+MSGTYPE=hide "You displaced *"
+
+## items on floor. don't repeat the message.
+MSGTYPE=norep "You see here a .*"
+MSGTYPE=norep "You see here an .*"
+
+## delayed instadeaths. always prompt for -more-
+MSGTYPE=stop "The couatl swings itself around you!"
+MSGTYPE=stop "The electric eel swings itself around you!"
+MSGTYPE=stop "The giant eel swings itself around you!"
+MSGTYPE=stop "The kraken swings itself around you!"
+MSGTYPE=stop "The python grabs you!"
+MSGTYPE=stop "You don't feel very well."
+MSGTYPE=stop "You are turning a little green."
+MSGTYPE=stop "You are turning a little .*"
+MSGTYPE=stop "Your limbs are getting oozy."
+MSGTYPE=stop "Your skin begins to peel away."
+MSGTYPE=stop "You are turning into a green slime."
+MSGTYPE=stop "You are slowing down."
+MSGTYPE=stop "Your limbs are stiffening."
+MSGTYPE=stop "It constricts your throat!"
+MSGTYPE=stop "You find it hard to breathe."
+MSGTYPE=stop "You're gasping for air."
+MSGTYPE=stop "Your blood is having trouble reaching your brain."
+MSGTYPE=stop "You can no longer breathe."
+MSGTYPE=stop "You're turning blue."
+MSGTYPE=stop "Your consciousness is fading."
+MSGTYPE=stop "You feel deathly sick."
+MSGTYPE=stop "You feel much worse."
+MSGTYPE=stop "You feel even worse."
+
+#Things that aren't dangerous by themselves but could kill you if you don't notice.
+MSGTYPE=stop "You fail to cast the spell correctly."
+MSGTYPE=stop "You see here a cockatrice corpse."
+MSGTYPE=stop "You see here a chickatrice corpse."
+MSGTYPE=stop "You are beginning to feel weak."
+
+## moving up or down stairs
+MSGTYPE=hide "You descend .*"
+MSGTYPE=hide "You (climb|fly) (up|down) .*"
+
+## Vibrating Square
+MSGTYPE=stop "You feel a strange vibration under your *."
+MSGTYPE=stop "You feel a strange vibration beneath you."
+
+#important because of conducts, or signaling careless play
+MSGTYPE=hide "You die..."
+MSGTYPE=stop "You kill *." #lost pacifist
+MSGTYPE=stop "You displaced *." #foodless: lost 1 nutrition
+MSGTYPE=stop "You stop. .* is in the way!" #ditto
+MSGTYPE=stop "You move right into *." #pacifist
+MSGTYPE=stop "Pardon me, *." #pacifist
+MSGTYPE=stop ".* catches the gold." #1/7 chance of angering shopkeeper
+
+# remapped movement keys --> error message at ; prompt.
+MSGTYPE=hide "Unknown direction: 'm' (use hjkl or .)."
+
+#run of the mill junk
+# MSGTYPE=hide "Which ring-finger, Right or Left?"
+# MSGTYPE=hide "Adjust letter to what .*"
+MSGTYPE=hide "Hello luna.*, the elven Wizard, welcome back to NetHack!" #noobhack
+MSGTYPE=hide "Aloha .*"
+MSGTYPE=hide "Velkommen .*"
+MSGTYPE=norep "Unknown command ' '."
+MSGTYPE=hide "Unavailable command .*"
+MSGTYPE=hide ".* land on the altar."
+MSGTYPE=hide "A .* lands on the altar."
+MSGTYPE=hide "An .* lands on the altar."
+MSGTYPE=hide "You cannot drop something you are wearing."
+MSGTYPE=hide ".?You hit the rock will all your might."
+MSGTYPE=hide "You write in the dust with your fingers."
+MSGTYPE=hide "You open the chest .*"
+MSGTYPE=hide "You start digging."
+MSGTYPE=hide "You hit the rock with all your might."
+MSGTYPE=hide "You succeed in cutting away some rock."
+
+
+#
+# MSGTYPE=norep "Unavailable command '.*'."
+
+
+#superfluous messages: suppress those that are
+# a) duplicate,
+# b) indicate normal course of events,
+# c) blatanlty obvious.
+# using items
+MSGTYPE=hide "You hear your heart beat."
+MSGTYPE=hide "You start playing the tooled horn*."
+MSGTYPE=hide "You start playing the horn called .*"
+MSGTYPE=hide "You start playing the .* horn .*"
+MSGTYPE=hide "You start playing the leather drum*."
+MSGTYPE=hide "You start playing the drum called .*"
+MSGTYPE=hide "You start playing the wooden harp.*"
+MSGTYPE=hide "You start playing the harp called .*"
+MSGTYPE=hide "The .* admires herself in your mirror."
+MSGTYPE=hide "You finish disrobing."
+
+# other dupes, normal course of operation
+MSGTYPE=hide "WHAMMM!!!"
+MSGTYPE=hide "Restoring save file..." #noobhack
+MSGTYPE=hide "Perhaps that's why .* cannot move it."
+MSGTYPE=hide "With great effort you move the boulder."
+MSGTYPE=hide "You find no traps on the .*"
+MSGTYPE=show "You ready .*"
+MSGTYPE=show "You ready: .*"
+MSGTYPE=show "You kill .*"
+
+#foocubi
+MSGTYPE=hide "You seem to have enjoyed it more than .*"
+MSGTYPE=hide ".?Take off your .*; it's in the way."
+MSGTYPE=hide ".?Take off your boots; let me rub your feet.?"
+MSGTYPE=hide "You feel very attracted to .*"
+MSGTYPE=hide "Time stands still while you and .* lie in each other's arms.*"
+MSGTYPE=hide "You seem to have enjoyed it more than .*"
+MSGTYPE=hide ".* seems to have enjoyed it more than you.*"
+
+# exercise
+MSGTYPE=hide "You must have been exercising."
+MSGTYPE=hide "You must have been very observant."
+MSGTYPE=hide "You haven't been paying attention."
+MSGTYPE=hide "You must be leading a healthy life-style."
+MSGTYPE=hide "You must have been working on your reflexes."
+
+# bathing
+MSGTYPE=norep "You fall into the water!"
+MSGTYPE=norep "You fall into the water."
+MSGTYPE=hide "You sink like a rock."
+MSGTYPE=hide "You try to crawl out of the water."
+MSGTYPE=hide "Pheew!  That was close."
+MSGTYPE=hide "You touch bottom."
+
+# quest portal
+MSGTYPE=hide "You activated a magic portal!"
+MSGTYPE=hide "You feel dizzy for a moment, but the sensation passes."
+MSGTYPE=norep "Once again, you are back at the Lonely Tower."
+
+#level and area sounds.
+MSGTYPE=norep "You hear someone cursing shoplifters."
+MSGTYPE=norep "You hear the chime of a cash register."
+MSGTYPE=hide ".?Hello, luna.*!  Welcome again to .*!?"
+MSGTYPE=hide "The priest.* of .* intones:  .?Pilgrim, you enter a sacred place!?"
+MSGTYPE=norep "You experience a strange sense of peace."
+MSGTYPE=norep "You have a strange forbidding feeling."
+MSGTYPE=norep "You hear bubbling water." #I need to explore anyway>>hide
+MSGTYPE=norep "You hear water falling on coins."
+MSGTYPE=norep "You hear the splashing of a naiad."
+MSGTYPE=norep "You hear a slow drip."
+MSGTYPE=norep "You hear a gurgling noise."
+MSGTYPE=hide "You hear someone counting money." #vaults waste time
+MSGTYPE=hide "You hear the footsteps of a guard on patrol."
+MSGTYPE=hide "You hear someone searching."
+MSGTYPE=norep "You hear snoring snakes."
+MSGTYPE=norep "You hear a strange wind."
+MSGTYPE=norep "You hear convulsive ravings."
+
+# confuse yourself
+MSGTYPE=hide "Your knowledge of this spell is twisted."
+MSGTYPE=hide "It invokes nightmarish images in your mind..."
+#cancelling (a stack of) sickness to fruit juice
+MSGTYPE=hide "The .* potion that you dipped into turns .*"
+MSGTYPE=hide "The .* potion turns *."
+
+
+#stash and containers
+# caution when typing fast -- the suppressed message may catch the keystroke intended for the actual loot menu
+MSGTYPE=hide "You put .* into the .* named .*"
+MSGTYPE=hide "You put .* into the .*"
+MSGTYPE=hide "You cannot stash something you are wearing."
+MSGTYPE=hide "You carefully open the .*" 
+MSGTYPE=hide "You carefully open the .* named .*"
+
+
+# Adapted from https://alt.org/nethack/userdata/t/tjr4/tjr4.nh343rc
+
+# pickup / drop /floor /shop items
+MSGTYPE=norep "You see here a.*"
+MSGTYPE=hide "You drop .*"
+MSGTYPE=hide ".?For you, good .*; only .* for this .*"
+MSGTYPE=hide "Fine goods for sale:"
+MSGTYPE=hide ".?Thank you for shopping in .*"
+MSGTYPE=norep "You have a little trouble lifting .*" 
+MSGTYPE=hide "Your credit is reduced by .* zorkmid*."
+MSGTYPE=hide "The .* will cost you * zorkmids."
+MSGTYPE=hide ".?For you, .*; only .*"
+MSGTYPE=norep "The .* named .* will cost you .* zorkmids."
+MSGTYPE=hide "You bought .*"
+MSGTYPE=hide "You sold .*"
+
+# Hide msgs for any +X 
+# MSGTYPE=hide "You put a +0 .* into the bag .* holding named .*"
+MSGTYPE=hide "You put a +.? .* into the bag .* holding named .*"
+# MSGTYPE=hide "You put an +0 * into the bag .* holding named .*"
+MSGTYPE=hide "You put an +.? * into the bag .* holding named .*"
+
+#pets picking stuff up. By convention, tame monsters have a | in their name.
+# update: I don't see a | in 3.6.0 names.
+# MSGTYPE=hide ".* picks up .*"
+# MSGTYPE=hide ".* drops .*"
+# MSGTYPE=show ".* picks up a gold piece."
+# MSGTYPE=hide ".* picks up .* gold piece.?"
+# MSGTYPE=show ".* drops a gold piece."
+# MSGTYPE=hide ".* drops .* gold piece.?"
+
+#human battle spam.
+#I know I'm magic resistant.
+MSGTYPE=hide "The magic missile bounces'"
+MSGTYPE=hide "The magic missile hits you.*"
+#reflection
+# MSGTYPE=hide "But it reflects from your medallion!"
+# Rust monsters are a particular annoyance.
+MSGTYPE=hide "Your .* is not affected."
+MSGTYPE=hide "The rust monster misses."
+MSGTYPE=hide "The rust monster touches you!"
+
+# pet care
+# MSGTYPE=hide ".* moves only reluctantly."
+# MSGTYPE=hide "It moves only reluctantly."
+# MSGTYPE=hide ".* eats .*" #maximally tame
+#unfortunately, this also kills the warning message for remote hostile mind flayers.
+# MSGTYPE=norep "You sense a faint wave of psychic energy." #hostile
+# MSGTYPE=hide "You sense a faint wave of psychic energy." #pet
+MSGTYPE=hide ".* concentrates."
+MSGTYPE=hide "A wave of psychic energy pours over you!"
+MSGTYPE=hide "It feels quite soothing."
+MSGTYPE=show "It locks on to your *telepathy!" # hostile
+# MSGTYPE=hide ".* casts a spell!"
+# MSGTYPE=norep ".* looks better." #spellcasting pet
+# MSGTYPE=hide ".* turns to flee!" #tooled horn
+
+
+# pet battle spam.
+# convention: pets have | in their name. If it's even |s, lots of spam gets suppressed, |ss even more drastically.
+# MSGTYPE=hide ".* is caught in the * explosion!"
+# MSGTYPE=hide ".* misses .*"
+# MSGTYPE=hide ".* hits .*"
+# MSGTYPE=hide ".* bites.*"
+# MSGTYPE=hide ".* thrusts .*"
+# MSGTYPE=hide ".* swings .*"
+# MSGTYPE=hide ".* butts .*"
+# MSGTYPE=hide ".* touches .*"
+# MSGTYPE=hide ".* squeezes .*"
+# MSGTYPE=hide ".* kicks .*"
+# MSGTYPE=hide ".* tentacles suck .*"
+# MSGTYPE=hide ".* swallows .*"
+# MSGTYPE=hide ".* brain is eaten!"
+# MSGTYPE=hide "The .* is jolted with electricity!" #energy vortex. Versus cockatrices.
+# MSGTYPE=hide "The .* is regurgitated!"
+# MSGTYPE=hide "The .* gets zapped!"
+MSGTYPE=hide ".* is mildly warmed?"
+
+# Show my pets
+# MSGTYPE=show ".* hits you"
+
+# pet mind flayer is attacking
+MSGTYPE=show "The .*'s last thought fades away..."
+MSGTYPE=show "The .*s' last thought fades away..."
+MSGTYPE=show "The .* doesn't notice."
+MSGTYPE=show ".* doesn't seem harmed."
+MSGTYPE=show "The .*'s helmet blocks .*'s attack to his head."
+MSGTYPE=show "The .*'s helmet blocks .*'s attack to her head."
+
+
+# -------------------------
+# Show cursed stuff after all other colors, should have highest priority
+MENUCOLOR=" cursed| C($| )"=red

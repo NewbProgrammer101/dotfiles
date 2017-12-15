@@ -1,0 +1,32 @@
+urxvt*transparent:true
+urxvt*shading:30
+urxvt*borderless:true
+urxvt.background: black
+urxvt.foreground: white
+urxvt.color0:	#000000
+urxvt.color1:	#B40000
+urxvt.color2:	#00AA00
+urxvt.color3:	#AAAA00
+urxvt.color4:	#5555AA
+urxvt.color5:	#AA00AA
+urxvt.color6:	#00AAAA
+urxvt.color7:	#AAAAAA
+urxvt.color8:	#555555
+urxvt.color9:	#FF0000
+urxvt.color10:	#00FF00
+urxvt.color11:	#FFFF00
+urxvt.color12:	#6464FF
+urxvt.color13:	#FF00FF
+urxvt.color14:	#00FFFF
+urxvt.color15:	#FFFFFF
+urxvt*font: xft:Monospace:pixelsize=11:antialias=true
+urxvt*imLocale:en_US.utf8
+urxvt*multichar_encoding:utf8
+urxvt*keysym.sym: string
+urxvt.perl-lib: /home/dell00/.scripts/urxvt/
+urxvt.perl-ext-common: clipboard,keyboard-select
+urxvt.keysym.M-Escape: perl:keyboard-select:activate
+urxvt.keysym.Ctrl-n: perl:clipboard:copy
+urxvt.keysym.Ctrl-t: perl:clipboard:paste
+urxvt.clipboard.copycmd: xclipboard -i -selection clipboard
+urxvt.clipboard.pastecmd: xclipboard -o -selection clipboard
