@@ -1,0 +1,33 @@
+[User]
+  email = countolaf17@gmail.com
+  name = Jalus Bilieyich
+
+[core]
+  excludesfile = ~/.gitignore
+  editor = nano
+
+[diff]
+  tool = nano
+
+[mergetool]
+  prompt = true
+
+[push]
+  default = simple
+
+[color]
+  ui = true
+
+[sendemail]
+  smtpencryption = tls
+  smtpserver = smtp.gmail.com
+  smtpuser = countolaf17@gmail.com
+  smtpserverport = 587
+
+[alias]
+  co = commit
+  st = status
+
+[color "diff"]
+  old = red strike
+  new = green italic
