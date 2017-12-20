@@ -1,2 +1,2 @@
 # dotfiles
-These make me happy. Hope they inspire.
+These keep me happy. Hope they inspire.
