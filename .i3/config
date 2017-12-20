@@ -168,5 +168,5 @@ hide_edge_borders both
 
 # Fun stuff here
 exec --no-startup-id "setxkbmap dvorak"
-exec --no-startup-id "bash /home/dell00/.fehi3"
+exec --no-startup-id "bash /home/dell00/.scripts/fehi3"
 exec --no-startup-id xautolock -time 3 -locker 'i3lock -d -c 000000'
