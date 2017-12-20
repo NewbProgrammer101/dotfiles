@@ -21,7 +21,7 @@ alias up="cd .."
 . /usr/libexec/mc/mc.sh
 MAIL="~/Mail/countolaf17@gmail.com/INBOX"
 HISTSIZE=2000
-HISTCONTROL= ignoreboth
+HISTCONTROL=ignoreboth
 HISTTIMEFORMAT="%Y-%m-%d_%H:%M:%S"
 HISTIGNORE='&:[ ]*'
 HISTFILESIZE=2000
