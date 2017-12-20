@@ -29,3 +29,6 @@ echo "System Framebuffer:"; cat /proc/fb
 echo
 echo "RTC Info:"; cat /proc/driver/rtc
 
+bash ~/.scripts/system-resources.sh > ~/.logs/system.log
+echo "##################################################"
+echo "Reference information found at ~/.logs/system.log"
