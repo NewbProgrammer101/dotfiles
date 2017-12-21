@@ -1,0 +1,21 @@
+[general]
+accounts = Gmail
+ui = quiet
+starttls = yes
+ssl = yes
+autorefresh = 1
+
+[Account Gmail]
+localrepository = Local
+remoterepository = Remote
+
+[Repository Local]
+type = Maildir
+localfolders = ~/Mail/countolaf17@gmail.com/
+
+[Repository Remote]
+type = Gmail
+remoteuser = countolaf17@gmail.com
+remotepass = password
+remotehost = imap.gmail.com
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
