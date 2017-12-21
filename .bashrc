@@ -1,4 +1,6 @@
-set -o vi
+alias bot="cd $(dirname $(find . | tail -1))
+alias clr="cd && clear"
+alias cl="clear"
 alias k="killall"
 alias cp="cp -i"
 alias mv="mv -i"

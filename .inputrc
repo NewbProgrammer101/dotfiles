@@ -6,6 +6,9 @@ $if Bash
 	set mark-directories on
 	set mark-symlinked-directories on
 	set completion-ignore-case on
+	set editing-mode vi
+	set keymap vi
+	set output-meta on
 	"\C-i": menu-complete
 	set visible-stats on
 	set show-all-if-ambiguous on
