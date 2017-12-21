@@ -1,3 +1,4 @@
+alias gc="gcc -Wall"
 alias bot="cd $(dirname $(find . | tail -1))
 alias clr="cd && clear"
 alias cl="clear"

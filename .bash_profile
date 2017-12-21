@@ -1,3 +1,4 @@
+trap ' [ "$PS1" ] && clear ' 0
 #case "$-" in
 #	*i*) echo "$(date '+%Y-%m-%d_%H:%M:%S_%Z') Interactive" \
 #		"~/.bash_profile ssh="$SSH_CONNECTION" >> ~/.logs/rc.log ;;
