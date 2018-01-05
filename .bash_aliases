@@ -29,7 +29,7 @@ alias apr="apropos"
 alias ff="find . -type f -name"
 
 # navigation
-alias ..="cd .."
+#alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../../"
