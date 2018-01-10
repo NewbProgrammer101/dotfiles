@@ -58,7 +58,7 @@ export LESSCHARSET="utf8"
 export LESSOPEN="|/usr/bin/lesspipe %s 2>&-"
 export LESS="-i -N -w	-z-4 -g -e -M -X -F -R -P%t?f%f \
 :stdin .?pb%pb\%: ?lbLine %lb:?bbByte %bb:-..."
-export NICKNAME="Brian"
+export NICKNAME="Jalus"
 export HOSTFILE="/etc/hosts"
 export PATH="$PATH:~/bin"
 export INPUTRC="~/.inputrc"
