@@ -1,8 +1,9 @@
-trap ' [ "$PS1" ] && clear ' 0
-#case "$-" in
-#	*i*) echo "$(date '+%Y-%m-%d_%H:%M:%S_%Z') Interactive" \
-#		"~/.bash_profile ssh="$SSH_CONNECTION" >> ~/.logs/rc.log ;;
-#	*  ) echo "$(date '+%Y-%m-%d_%H:%M:%S_%Z') Non-interactive" \
-#		"~/.bash_profile ssh="$SSH_CONNECTION" >> ~/.logs/rc.log ;;
-#esac
-export BROWSER="dillo"
+. ~/.bashrc
+if test -z "${XDG_RUNTIME_DIR}"; then
+	export XDG_RUNTIME_DIR=/tmp/${UID}-runtime-dir
+	if ! test -d "${XDG_RUNTIME_DIR}"; then
+		mkdir "${XDG_RUNTIME_DIR}"
+		chmod 0700 "${XDG_RUNTIME_DIR}"
+	fi
+fi
+[[ -z $DISPLAY && $TERM = "linux" && $(tty) = /dev/tty1 ]] && exec tmux
