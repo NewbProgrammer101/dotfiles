@@ -2,8 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 iatest=$(expr index "$-" i)
-. /usr/libexec/mc/mc.sh
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -35,9 +33,12 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+#include aliases
 . ~/.bash_aliases
 #include ~/.bash_functions
 . ~/.bash_functions
+#include MC
+. /usr/libexec/mc/mc.sh
 export LESS_TERMCAP_mb=$'\E[01;33m'
 export LESS_TERMCAP_md=$'\E[01;33m'
 export LESS_TERMCAP_me=$'\E[0m'
@@ -51,6 +52,7 @@ HISTCONTROL=ignoreboth
 HISTTIMEFORMAT="%F %T"
 HISTIGNORE='&:[ ]*'
 HISTFILESIZE=2000
+export BROWSER="w3m"
 export EDITOR="nano"
 export VISUAL=$EDITOR
 export PAGER="/usr/bin/less"
@@ -58,7 +60,7 @@ export LESSCHARSET="utf8"
 export LESSOPEN="|/usr/bin/lesspipe %s 2>&-"
 export LESS="-i -N -w	-z-4 -g -e -M -X -F -R -P%t?f%f \
 :stdin .?pb%pb\%: ?lbLine %lb:?bbByte %bb:-..."
-export NICKNAME="Jalus"
+export NICKNAME="Brian"
 export HOSTFILE="/etc/hosts"
 export PATH="$PATH:~/bin"
 export INPUTRC="~/.inputrc"

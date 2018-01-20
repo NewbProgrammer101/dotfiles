@@ -39,6 +39,16 @@ dialog --backtitle "Your Games" --title "Games" --menu " \n" 0 0 0 \
 	g "Snake" \
 	h "Worm" \
 	i "GNU Chess" \
+	j "Sudoku" \
+	k "Pacman" \
+	l "Game of Nim" \
+	m "Dopewars" \
+	n "TomeNET" \
+	o "Chess" \
+	p "Empire" \
+	q "Backgammon" \
+	r "Battleships" \
+	s "Ski" \
 	x "Exit" 2>"${INPUT}"
 menuitem=$(<"${INPUT}")
 case $menuitem in
@@ -79,6 +89,16 @@ case $menuitem in
 	g) snake;;
 	h) worm;;
 	i) gnuchess;;
+	j) nsuds;;
+	k) pacman;;
+	l) Game-Of-Nim.sh;;
+	m) Dopewars.sh;;
+	n) tomenet;;
+	o) cboard;;
+	p) vms-empire;;
+	q) gnubg;;
+	r) bs;;
+	s) ski;;
 	x) exit 0;;
 esac
 

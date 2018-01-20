@@ -11,23 +11,50 @@ alias ins='sudo emerge -av'
 alias ssh="ssh_with_bash"
 alias autorem="sudo emerge -ac"
 alias sha1="openssl sha1"
+alias sshd="sudo service sshd start"
 
-## Space on drive
+## Maintainence/stuff
 alias disk='du -S | sort -n -r |more'
 alias folders="du -h --max-depth=1"
 alias foldersort="find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn"
-alias tree="tree -CAhF --dirsfirst"
-alias treed="tree -CAFd"
-alias df="df -HT"
+alias tree="tree -CAhFs --dirsfirst"
+alias df="df -HT -x tmpfs -x usbfs -x devtmpfs"
 alias sway="sway -d 2>~/.logs/sway.log"
 alias startx="startx -- vt1 -keeptty > ~/.logs/xorg.log 2>&1"
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
+alias sizeof="du -sh"
+alias extundelete-d='sudo extundelete "$1" --restore-directory "$2"'
+alias extundelete-f='sudo extundelete "$1" --restore-files "$2"'
+alias extundelete-r='sudo extundelete "$1" --restore-all'
+alias extundelete-sda='sudo extundelete /dev/sda --restore-all'
+alias extundelete-sda-d='sudo extundelete /dev/sda --restore-directory "$1"'
+alias extundelete-sda-f='sudo extundelete /dev/sda --restore-files "$1"'
+alias hdinfo='hdparm -i[I] /dev/sda'
+alias etcup="sudo etc-update"
+alias euse="sudo euse"
+alias eqf="equery f"
+alias equ="equery u"
+alias eqh="equery h"
+alias eqa="equery a"
+alias eqb="equery b"
+alias eql="equery l"
+alias eqd="equery d"
+alias eqg="equery g"
+alias eqc="equery c"
+alias eqk="equery k"
+alias eqm="equery m"
+alias eqy="equery y"
+alias eqs="equery s"
+alias eqw="equery w"
+alias acpi="acpi -V"
+alias lspci="sudo lspci -nnk"
 
 # search
 alias where="which"
 alias what="apropos"
 alias apr="apropos"
 alias ff="find . -type f -name"
+alias searchdesc="emerge --searchdesc"
 
 # navigation
 alias ...="cd ../.."
@@ -46,7 +73,7 @@ alias chgrp='chgrp --preserve-root'
 alias shred='shred -n 100 -z -v -u'
 alias exportallkeys="exportmykeys_private && exportmykeys_public"
 alias printmykeys="gpg --fingerprint"
-alias mykeys="gpg --list-keys && gpg --list-secret-keys"
+alias mykeys="gpg --list-keys"
 
 #### REBOOT/SHUTDOWN ####
 alias reboot='sudo /sbin/reboot'
@@ -58,8 +85,9 @@ alias ls='ls -F --color=auto --group-directories-first'
 alias la='ls -AF'
 alias ll='ls -l'
 alias sl=ls
+alias l=ls
 alias edit="nano"
-alias grep='grep --color=auto'
+alias grep='grep --color=auto -r'
 alias md='mkdir -p -v'
 alias rd='rmdir -v'
 alias gc="gcc -Wall"
@@ -112,3 +140,33 @@ alias lvim="vim -c \"normal '0\""
 alias gutenberg="w3m http://gutenberg.org"
 alias ddg="w3m https://ddg.gg/lite"
 alias tcp="sudo netstat -atp"
+alias showallaliases="compgen -A alias"
+alias showallfunctions="compgen -A function"
+alias iamcow="fortune | cowsay"
+alias insults='wget http://www.randominsults.net -O - 2>/dev/null | grep \<strong\> | sed "s;^.*<i>\(.*\)</i>.*$;\1;";'
+alias m=mutt
+alias rh="rehash"
+alias web="w3m"
+alias findgrep="find | grep"
+alias mann="man"
+alias q="exit"
+alias back="cd $OLDPWD"
+alias documents="cd ~/Documents"
+alias pictures="cd ~/Pictures"
+alias umount="sudo umount"
+alias downloads="cd ~/Downloads"
+alias brcupdate=". ~/.bashrc"
+alias mkconf="sudo nano /etc/portage/make.conf"
+alias pkguse="sudo nano /etc/portage/package.use/package.use"
+alias 99bottles='x="bottles of beer";y="on the wall";for b in {99..1};do echo "$b $x $y, $b $x. Take one down pass it around, $(($b-1)) $x $y"; sleep 3;done'
+alias lotto='shuf -i 1-49 -n 6 | sort -n | xargs'
+alias dns="cat /etc/resolv.conf"
+alias hto=htop
+alias music="cd ~/Music && cmus"
+alias reddit="w3m https://reddit.com"
+alias kdocs="cd ~/Documents/Documentation"
+alias gccdocs="w3m https://gcc.gnu.org/onlinedocs/gcc-6.4.0/gcc"
+alias thop=htop
+alias tho=htop
+alias genwiki="w3m https://wiki.gentoo.org"
+alias balias="n ~/.bash_aliases"

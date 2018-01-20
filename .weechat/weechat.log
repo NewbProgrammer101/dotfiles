@@ -1,0 +1,34 @@
+[2018-01-15 22:36:01] WeeChat 1.9.1 (compiled on Jan 12 2018 17:54:47)
+[2018-01-15 22:36:01] Reading configuration file sec.conf
+[2018-01-15 22:36:05] Reading configuration file weechat.conf
+[2018-01-15 22:36:05] Reading configuration file plugins.conf
+[2018-01-15 22:36:05] Reading configuration file charset.conf
+[2018-01-15 22:36:05] Reading configuration file logger.conf
+[2018-01-15 22:36:05] Reading configuration file exec.conf
+[2018-01-15 22:36:05] Reading configuration file trigger.conf
+[2018-01-15 22:36:05] Reading configuration file alias.conf
+[2018-01-15 22:36:05] Reading configuration file buflist.conf
+[2018-01-15 22:36:05] Reading configuration file fifo.conf
+[2018-01-15 22:36:05] Reading configuration file xfer.conf
+[2018-01-15 22:36:05] Reading configuration file irc.conf
+[2018-01-15 22:36:05] Reading configuration file relay.conf
+[2018-01-15 22:36:05] Reading configuration file script.conf
+[2018-01-15 22:36:05] irc: connecting to server chat.freenode.net/7000 (SSL)...
+[2018-01-15 22:36:16] irc: connecting to server chat.freenode.net/7000 (SSL)...
+[2018-01-15 22:36:37] irc: connecting to server chat.freenode.net/7000 (SSL)...
+[2018-01-15 22:37:18] irc: connecting to server chat.freenode.net/7000 (SSL)...
+[2018-01-15 22:38:39] irc: connecting to server chat.freenode.net/7000 (SSL)...
+[2018-01-15 22:38:56] Writing configuration file plugins.conf
+[2018-01-15 22:38:56] Writing configuration file charset.conf
+[2018-01-15 22:38:56] Writing configuration file xfer.conf
+[2018-01-15 22:38:56] Writing configuration file script.conf
+[2018-01-15 22:38:56] Writing configuration file buflist.conf
+[2018-01-15 22:38:56] Writing configuration file exec.conf
+[2018-01-15 22:38:56] Writing configuration file alias.conf
+[2018-01-15 22:38:56] Writing configuration file relay.conf
+[2018-01-15 22:38:56] Writing configuration file logger.conf
+[2018-01-15 22:38:56] Writing configuration file fifo.conf
+[2018-01-15 22:38:56] Writing configuration file trigger.conf
+[2018-01-15 22:38:56] Writing configuration file irc.conf
+[2018-01-15 22:38:56] Writing configuration file weechat.conf
+[2018-01-15 22:38:56] Writing configuration file sec.conf

@@ -1,0 +1,7 @@
+$_hdimage = "drives/* /home/dell00/Civilization"
+$_cpu = (80386)
+$_cpuspeed = (166.666)
+$_mapping= "mapshm"
+$_sound = (on)
+$_chipset = "ati"
+
