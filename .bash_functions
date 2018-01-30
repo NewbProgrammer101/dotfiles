@@ -1,4 +1,6 @@
 export MARKPATH=$HOME/.marks
+function addfunction() { declare -f $1 >> ~/.bash_functions ; }
+function allStrings() { cat "$1" | tr -d "\0" | strings ; }
 function chr() { printf \\$(($1/64*100+$1%64/8*10+$1%8)); }
 function math-log() {
 	echo "Enter value: "

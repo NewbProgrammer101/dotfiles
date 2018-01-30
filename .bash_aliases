@@ -1,6 +1,4 @@
 # Generic aliases
-alias startx="startx -- vt1 -keeptty > ~/.xorg.log 2>&1"
-alias st='stterm # -f <font name> -g <geometry>'
 alias tmux="tmux -2"
 alias upd='sudo emerge --sync'
 alias upg='sudo emerge -avDuN @world'
@@ -12,6 +10,7 @@ alias ssh="ssh_with_bash"
 alias autorem="sudo emerge -ac"
 alias sha1="openssl sha1"
 alias sshd="sudo service sshd start"
+alias sudo="sudo "
 
 ## Maintainence/stuff
 alias disk='du -S | sort -n -r |more'
@@ -20,7 +19,6 @@ alias foldersort="find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -r
 alias tree="tree -CAhFs --dirsfirst"
 alias df="df -HT -x tmpfs -x usbfs -x devtmpfs"
 alias sway="sway -d 2>~/.logs/sway.log"
-alias startx="startx -- vt1 -keeptty > ~/.logs/xorg.log 2>&1"
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 alias sizeof="du -sh"
 alias extundelete-d='sudo extundelete "$1" --restore-directory "$2"'
@@ -72,7 +70,7 @@ alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 alias shred='shred -n 100 -z -v -u'
 alias exportallkeys="exportmykeys_private && exportmykeys_public"
-alias printmykeys="gpg --fingerprint"
+alias printkeys="gpg --fingerprint"
 alias mykeys="gpg --list-keys"
 
 #### REBOOT/SHUTDOWN ####
@@ -87,7 +85,7 @@ alias ll='ls -l'
 alias sl=ls
 alias l=ls
 alias edit="nano"
-alias grep='grep --color=auto -r'
+alias grep='grep --color=always'
 alias md='mkdir -p -v'
 alias rd='rmdir -v'
 alias gc="gcc -Wall"
@@ -99,7 +97,6 @@ alias cp="cp -iv"
 alias mv="mv -iv"
 alias ren="mv"
 alias rm="rm -rf"
-alias grep="grep --color=always"
 alias a10="ssh -p 2222 a10"
 alias cal="calcurse"
 alias mkdir="mkdir -pv"
@@ -170,3 +167,19 @@ alias thop=htop
 alias tho=htop
 alias genwiki="w3m https://wiki.gentoo.org"
 alias balias="n ~/.bash_aliases"
+alias github="w3m https://github.com"
+alias tetris=bastet
+alias wget="wget -c"
+alias gd=cd
+alias rt=cd
+alias news=newsboat
+alias free="free -m"
+alias frr=free
+alias newbpro="w3m https://github.com/NewbProgrammer101"
+#alias mpfb='mplayer -vo fbdev -xy 1024 -fs -zoom "$1"'
+alias bible=echobible
+alias bibl=echobible
+alias hotp=htop
+alias hop=htop
+alias doc=documents
+alias ch=cd

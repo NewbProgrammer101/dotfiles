@@ -37,8 +37,6 @@ fi
 . ~/.bash_aliases
 #include ~/.bash_functions
 . ~/.bash_functions
-#include MC
-. /usr/libexec/mc/mc.sh
 export LESS_TERMCAP_mb=$'\E[01;33m'
 export LESS_TERMCAP_md=$'\E[01;33m'
 export LESS_TERMCAP_me=$'\E[0m'
@@ -60,7 +58,7 @@ export LESSCHARSET="utf8"
 export LESSOPEN="|/usr/bin/lesspipe %s 2>&-"
 export LESS="-i -N -w	-z-4 -g -e -M -X -F -R -P%t?f%f \
 :stdin .?pb%pb\%: ?lbLine %lb:?bbByte %bb:-..."
-export NICKNAME="Brian"
+export NICKNAME="Jalus"
 export HOSTFILE="/etc/hosts"
 export PATH="$PATH:~/bin"
 export INPUTRC="~/.inputrc"
@@ -138,7 +136,12 @@ PS1="\[\033[0;37m\]\[[\033[0;36m\]\u\[\033[0;37m\]]\342\224\200[\[\033[0;31m\]\h
 #	PS3="Please enter a number from above list: "
 #	PS4="\[${DARKGRAY}\]+\[${NOCOLOR}\] "
 #}
-PS2="\[${DARKGRAY}\]>\[${NOCOLOR}\] "
+XDG_CONFIG_HOME="~/.config"
+LIGHTGRAY="\033[0;37m"
+CYAN="\033[0;36m"
+LIGHTCYAN="\033[1;36m"
+GRAY="\[\033[1;30m\]"
+PS2="$LIGHT_CYAN>$CYAN>$GRAY>$LIGHT_GRAY "
 PS3="Please enter a number from above list: "
 PS4="\[${DARKGRAY}\]+\[${NOCOLOR}\] "
 echo "####################################################"
@@ -188,6 +191,7 @@ shopt -s sourcepath
 shopt -s extglob
 shopt -s checkhash
 shopt -s cmdhist
+shopt -s autocd
 set -o notify
 set -o noclobber
 set -b
