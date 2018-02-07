@@ -37,6 +37,7 @@ fi
 . ~/.bash_aliases
 #include ~/.bash_functions
 . ~/.bash_functions
+#include MC
 export LESS_TERMCAP_mb=$'\E[01;33m'
 export LESS_TERMCAP_md=$'\E[01;33m'
 export LESS_TERMCAP_me=$'\E[0m'
@@ -51,7 +52,7 @@ HISTTIMEFORMAT="%F %T"
 HISTIGNORE='&:[ ]*'
 HISTFILESIZE=2000
 export BROWSER="w3m"
-export EDITOR="nano"
+export EDITOR="vim"
 export VISUAL=$EDITOR
 export PAGER="/usr/bin/less"
 export LESSCHARSET="utf8"
@@ -61,6 +62,7 @@ export LESS="-i -N -w	-z-4 -g -e -M -X -F -R -P%t?f%f \
 export NICKNAME="Jalus"
 export HOSTFILE="/etc/hosts"
 export PATH="$PATH:~/bin"
+export PATH="$PATH:~/.vim/bundle/vim-live-latex-preview/bin"
 export INPUTRC="~/.inputrc"
 PS1="\[\033[0;37m\]\[[\033[0;36m\]\u\[\033[0;37m\]]\342\224\200[\[\033[0;31m\]\h\[\033[0;37m\]]\342\224\200[\[\033[0;32m\]\w\[\033[0;37m\]]\n\[\033[0;37m\]\342\224\224\342\224\200\342\224\200\342\225\274\[\033[0m\]"
 #function __setprompt
@@ -141,6 +143,7 @@ LIGHTGRAY="\033[0;37m"
 CYAN="\033[0;36m"
 LIGHTCYAN="\033[1;36m"
 GRAY="\[\033[1;30m\]"
+DARKGRAY="\033[1;30m"
 PS2="$LIGHT_CYAN>$CYAN>$GRAY>$LIGHT_GRAY "
 PS3="Please enter a number from above list: "
 PS4="\[${DARKGRAY}\]+\[${NOCOLOR}\] "
