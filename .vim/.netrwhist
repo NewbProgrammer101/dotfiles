@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/usr/portage/dev-texlive/texlive-fontsextra'
+let g:netrw_dirhist_2='/home/dell00/.yadr/vim/settings'
+let g:netrw_dirhist_3='/home/dell00/.git/branches/qub3d_devdocs/source/howto'

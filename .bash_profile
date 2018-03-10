@@ -6,4 +6,4 @@ if test -z "${XDG_RUNTIME_DIR}"; then
 		chmod 0700 "${XDG_RUNTIME_DIR}"
 	fi
 fi
-[[ -z $DISPLAY && $TERM = "linux" && $(tty) = /dev/tty1 ]] && exec tmux
+[[ -z $DISPLAY && $TERM = "linux" && $(tty) = /dev/tty1 ]] && exec emacs

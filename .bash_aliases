@@ -1,5 +1,5 @@
 # Generic aliases
-alias tmux="tmux -2"
+#alias tmux="tmux -2"
 alias upd='sudo emerge --sync'
 alias upg='sudo emerge -avDuN @world'
 alias purge='sudo emerge --rage-clean'
@@ -18,7 +18,7 @@ alias folders="du -h --max-depth=1"
 alias foldersort="find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn"
 alias tree="tree -CAhFs --dirsfirst"
 alias df="df -HT -x tmpfs -x usbfs -x devtmpfs"
-alias sway="sway -d 2>~/.logs/sway.log"
+#alias sway="sway -d 2>~/.logs/sway.log"
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 alias sizeof="du -sh"
 alias extundelete-d='sudo extundelete "$1" --restore-directory "$2"'
@@ -85,7 +85,7 @@ alias ll='ls -l'
 alias sl=ls
 alias l=ls
 alias edit="nano"
-alias grep='grep --color=always'
+alias grep='grep --color=always -ir'
 alias md='mkdir -p -v'
 alias rd='rmdir -v'
 alias gc="gcc -Wall"
@@ -100,7 +100,7 @@ alias rm="rm -rf"
 alias a10="ssh -p 2222 a10"
 alias cal="calcurse"
 alias mkdir="mkdir -pv"
-alias ping="ping -c 2"
+alias ping="ping -c 1"
 alias gcl="git clone"
 alias gcs="git co"
 alias gu="git push"
@@ -185,3 +185,6 @@ alias doc=documents
 alias ch=cd
 alias personal="cd ~/Documents/Personal"
 alias r=ranger
+alias mplayer="mplayer -loop 0 "
+alias mpdf="mupdf-x11"
+alias mp=mplayer

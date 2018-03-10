@@ -1,9 +1,30 @@
 font pango:monospace 10
-
-set $up l
-set $down k
-set $left j
-set $right semicolon
+set $term st
+set $mod Mod1
+set $up k
+set $down j
+set $left h
+set $right l
+#set $shutdown halt
+set $reboot reboot
+#set $netrefresh --no-startup-id "sudo rc-service wpa_supplicant restart && sudo rc-service dhcpcd restart"
+set $music --no-startup-id st -e cmus
+#set $pause --no-startup-id cmus-remote -u
+#set $next --no-startup-id cmus-remote -n
+#set $prev --no-startup-id cmus-remote -r
+#set $lilfor --no-startup-id cmus-remote -k +10
+#set $bigfor --no-startup-id cmus-remote -k +120
+#set $lilbak --no-startup-id cmus-remote -k -10
+#set $bigbak --no-startup-id cmus-remote -k -120
+#set $beg --no-startup-id cmus-remote -k 00:00:00
+set $inc --no-startup-id amixer sset Master 2%+
+set $biginc --no-startup-id amixer sset Master 5%+
+set $dec --no-startup-id amixer sset Master 2%-
+set $bigdec --no-startup-id amixer sset Master 5%-
+set $mute --no-startup-id amixer sset Master toggle
+#set $truemute --no-startup-id amixer sset Master mute
+#set $screencast  --no-startup-id bash ~/bin/screencast_alsa.sh
+#set $audio --no-startup-id bash ~/bin/audio_alsa.sh
 
 # use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier Mod1
@@ -22,9 +43,11 @@ focus_on_window_activation none
 show_marks yes
 
 # start a terminal
-bindsym Mod1+Return exec urxvt
-bindsym Mod1+Shift+Return exec urxvt -e htop
+bindsym Mod1+Return exec st
+bindsym Mod1+Shift+Return exec st -e htop
 
+#Cmus
+bindsym $mod+Shift+m exec $music
 #i3lock
 bindsym Mod1+Shift+x exec i3lock
 
@@ -43,13 +66,27 @@ bindsym Mod1+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 bindsym Mod1+d exec --no-startup-id i3-dmenu-desktop
+bindsym Mod1+Shift+d exec discord
 
+bindsym $mod+Escape workspace prev
+bindsym $mod+Shift+Escape exec i3-msg exit
+bindsym $mod+Shift+BackSpace exec $reboot
+bindsym $mod+e exec st -e mutt
+bindsym $mod+y exec st -e calcurse
 # change focus
 bindsym Mod1+$left focus left
 bindsym Mod1+$down focus down
 bindsym Mod1+$up focus up
 bindsym Mod1+$right focus right
-
+bindsym $mod+Print exec --no-startup-id scrot
+bindsym $mod+Scroll_Lock exec $audio
+bindsym XF86AudioMute exec $mute
+bindsym XF86AudioLowerVolume exec $dec
+bindsym XF86AudioRaiseVolume exec $inc
+#bindsym XF86Sleep exec sudo zzz
+bindsym XF86MonBrightnessDown   exec --no-startup-id xbacklight -dec 15
+bindsym XF86MonBrightnessUp     exec --no-startup-id xbacklight -inc 15
+bindsym XF86WLAN                exec --no-startup-id sudo rc-service wpa_supplicant restart
 # alternatively, you can use the cursor keys:
 bindsym Mod1+Left focus left
 bindsym Mod1+Down focus down
@@ -69,7 +106,7 @@ bindsym Mod1+Shift+Up move up
 bindsym Mod1+Shift+Right move right
 
 # split in horizontal orientation
-bindsym Mod1+h split h
+#bindsym Mod1+h split h
 
 # split in vertical orientation
 bindsym Mod1+v split v
@@ -80,7 +117,7 @@ bindsym Mod1+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym Mod1+s layout stacking
 bindsym Mod1+w layout tabbed
-bindsym Mod1+e layout toggle split
+#bindsym Mod1+e layout toggle split
 
 # toggle tiling / floating
 bindsym Mod1+Shift+space floating toggle
@@ -130,7 +167,7 @@ bindsym Mod1+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym Mod1+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym Mod1+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym Mod1+Shift+e exec i3-msg exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -159,14 +196,18 @@ mode "resize" {
 bindsym Mod1+r mode "resize"
 
 # i3 gaps
-for_window [window_role="pop-up"] floating enable
-for_window [window_role="task_dialog"] floating enable
-for_window [title="xcalc$"] floating enable
-gaps inner 15
-gaps outer 25
-hide_edge_borders both
+#for_window [window_role="pop-up"] floating enable
+#for_window [window_role="task_dialog"] floating enable
+#for_window [title="xcalc$"] floating enable
+#gaps inner 15
+#gaps outer 25
+#hide_edge_borders both
 
 # Fun stuff here
 exec --no-startup-id "setxkbmap dvorak"
-exec --no-startup-id "bash ~/.scripts/fehi3"
-exec --no-startup-id xautolock -time 3 -locker 'i3lock -d -c 000000'
+exec --no-startup-id "xmodmap -e 'keysym Alt_R = Multi_key'"
+#exec --no-startup-id "bash ~/.scripts/fehi3"
+exec --no-startup-id "feh --bg-scale ~/.config/wall.png"
+#exec --no-startup-id xautolock -time 3 -locker 'i3lock -d -c 000000'
+#exec --no-startup-id conky
+
