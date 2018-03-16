@@ -61,7 +61,7 @@ export LESS="-i -N -w	-z-4 -g -e -M -X -F -R -P%t?f%f \
 :stdin .?pb%pb\%: ?lbLine %lb:?bbByte %bb:-..."
 export NICKNAME="Jalus"
 export HOSTFILE="/etc/hosts"
-export PATH="$PATH:~/bin"
+export PATH="$PATH:~/.scripts"
 export PATH="$PATH:~/.vim/bundle/vim-live-latex-preview/bin"
 export PATH="$PATH:~/.arc/arcanist/bin/"
 export INPUTRC="~/.inputrc"

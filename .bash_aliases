@@ -11,6 +11,7 @@ alias autorem="sudo emerge -ac"
 alias sha1="openssl sha1"
 alias sshd="sudo service sshd start"
 alias sudo="sudo "
+alias findgrep="sudo find | grep "
 
 ## Maintainence/stuff
 alias disk='du -S | sort -n -r |more'
@@ -144,7 +145,6 @@ alias insults='wget http://www.randominsults.net -O - 2>/dev/null | grep \<stron
 alias m=mutt
 alias rh="rehash"
 alias web="w3m"
-alias findgrep="find | grep"
 alias mann="man"
 alias q="exit"
 alias back="cd $OLDPWD"
