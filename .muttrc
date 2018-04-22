@@ -32,13 +32,11 @@ set pager=vim
 set crypt_autosmime="no"
 set smime_is_default="no"
 set pager_stop="yes"
-set arrow_cursor="yes"
+#set arrow_cursor="yes"
 set wait_key="no"
 set mime_forward="yes"
 set query_command= "abook --mutt-query '%s'"
-
-# Abook support
-macro index,pager a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
-bind editor <Tab> complete-query
+macro index,pager  a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
+bind editor        <Tab> complete-query
 
 set pager_format="(P1) %S [%C/%T] %n (%l) %s"
