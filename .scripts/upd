@@ -1,20 +1,20 @@
 #!/bin/bash
 
-EMERGE="emerge --sync"
-EMERGE_UPDATE="emerge -avDuN @world @security"
+UPDATE="apt-get update"
+UPGRADE="apt-get upgrade"
 CHOICE="$1"
 
-echo "Do you want to sync Portage? (Case sensitive) [Y/n]: "
+echo "Do you want to update your package repositories? (Case sensitive) [Y/n]: "
 read $CHOICE
 
 if [ "$CHOICE" = "Y" ]; then
-	sudo $EMERGE
+	sudo $UPDATE
 fi
 
 
-echo "Do you want to update your system? (Case sensitive) [Y/n]: "
+echo "Do you want to upgradee your system? (Case sensitive) [Y/n]: "
 read $CHOICE
 
 if [ "$CHOICE" = "Y" ]; then
-	sudo $EMERGE_UPDATE
+	sudo $UPGRADE
 fi
