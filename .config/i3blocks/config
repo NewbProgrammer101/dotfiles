@@ -1,0 +1,22 @@
+command=/usr/lib/i3blocks/$BLOCK_NAME
+separator_block_width=15
+markup=pango
+
+[weather]
+command=~/.scripts/i3weather
+interval=3600
+
+[volume]
+interval=once
+command=i3volume
+markup=pango
+signal=10
+
+[battery]
+command=acpi | cut -d " " -f3-5 |  sed -e "s/,//g;s/Discharging/🔋/;s/Charging/🔌/;s/Unknown/❓/;s/Full/⚡/;s/ 0*/ /g;s/ :/ /g"
+interval=5
+
+[time]
+label=📅
+command=echo $(date '+%Y %b %d %I:%M%p') 🕓
+interval=30

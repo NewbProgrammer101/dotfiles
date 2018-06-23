@@ -45,13 +45,13 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;37m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
-export MAIL="~/Mail/countolaf17@gmail.com/INBOX"
+#export MAIL="~/Mail/countolaf17@gmail.com/INBOX"
 HISTSIZE=2000
 HISTCONTROL=ignoreboth
 HISTTIMEFORMAT="%F %T"
 HISTIGNORE='&:[ ]*'
 HISTFILESIZE=2000
-export BROWSER="w3m"
+export BROWSER="firefox"
 export EDITOR="vim"
 export VISUAL=$EDITOR
 export PAGER="/usr/bin/less"
@@ -62,83 +62,10 @@ export LESS="-i -N -w	-z-4 -g -e -M -X -F -R -P%t?f%f \
 export NICKNAME="Jalus"
 export HOSTFILE="/etc/hosts"
 export PATH="$PATH:~/.scripts"
-export PATH="$PATH:~/.vim/bundle/vim-live-latex-preview/bin"
+#export PATH="$PATH:~/.vim/bundle/vim-live-latex-preview/bin"
 export PATH="$PATH:~/.arc/arcanist/bin/"
 export INPUTRC="~/.inputrc"
 PS1="\[\033[0;37m\]\[[\033[0;36m\]\u\[\033[0;37m\]]\342\224\200[\[\033[0;31m\]\h\[\033[0;37m\]]\342\224\200[\[\033[0;32m\]\w\[\033[0;37m\]]\n\[\033[0;37m\]\342\224\224\342\224\200\342\224\200\342\225\274\[\033[0m\]"
-#function __setprompt
-#{
-#	local LAST_COMMAND=$?
-#	local LIGHTGRAY="\033[0;37m"
-#	local WHITE="\033[1;37m"
-#	local BLACK="\033[0;30m"
-#	local DARKGRAY="\033[1;30m"
-#	local RED="\033[0;31m"
-#	local LIGHTRED="\033[1;31m"
-#	local GREEN="\033[0;32m"
-#	local LIGHTGREEN="\033[1;32m"
-#	local BROWN="\033[0;33m"
-#	local YELLOW="\033[1;33m"
-#	local BLUE="\033[0;34m"
-#	local LIGHTBLUE="\033[1;34m"
-#	local MAGENTA="\033[0;35m"
-#	local LIGHTMAGENTA="\033[1;35m"
-#	local CYAN="\033[0;36m"
-#	local LIGHTCYAN="\033[1;36m"
-#	local NOCOLOR="\033[0m"
-#	if [[ $LAST_COMMAND != 0 ]]; then
-#		PS1="\[${DARKGRAY}\](\[${LIGHTRED}\]ERROR\[${DARKGRAY}\])-(\[${RED}\]Exit Code \[${LIGHTRED}\]${LAST_COMMAND}\[${DARKGRAY}\])-(\[${RED}\]"
-#		if [[ $LAST_COMMAND == 1 ]]; then
-#			PS1+="General error"
-#		elif [ $LAST_COMMAND == 2 ]; then
-#			PS1+="Missing keyword, command, or permission problem"
-#		elif [ $LAST_COMMAND == 126 ]; then
-#			PS1+="Permission problem or command is not an executable"
-#		elif [ $LAST_COMMAND == 127 ]; then
-#			PS1+="Command not found"
-#		elif [ $LAST_COMMAND == 128 ]; then
-#			PS1+="Invalid argument to exit"
-#		elif [ $LAST_COMMAND == 129 ]; then
-#			PS1+="Fatal error signal 1"
-#		elif [ $LAST_COMMAND == 130 ]; then
-#			PS1+="Script terminated by Control-C"
-#	        elif [ $LAST_COMMAND == 131 ]; then
-#	                PS1+="Fatal error signal 3"
-#	        elif [ $LAST_COMMAND == 132 ]; then
-#	                PS1+="Fatal error signal 4"
-#	        elif [ $LAST_COMMAND == 133 ]; then
-#	                PS1+="Fatal error signal 5"
-#	        elif [ $LAST_COMMAND == 134 ]; then
-#	                PS1+="Fatal error signal 6"
-#	        elif [ $LAST_COMMAND == 135 ]; then
-#			PS1+="Fatal error signal 7"
-#	        elif [ $LAST_COMMAND == 136 ]; then
-#	                PS1+="Fatal error signal 8"
-#	        elif [ $LAST_COMMAND == 137 ]; then
-#	                PS1+="Fatal error signal 9"
-#	        elif [ $LAST_COMMAND -gt 255 ]; then
-#	                PS1+="Exit status out of range"
-#	        else
-#	                PS1+="Unknown error code"
-#	        fi
-#		PS1+="\[${DARKGRAY}\])\[${NOCOLOR}\]\n"
-#	else
-#	        PS1=""
-#	fi
-#	PS1+="\[${DARKGRAY}\](\[${CYAN}\]\$(date +%a) $(date +%b-'%-m')"
-#	PS1+="${BLUE} $(date +'%-I':%M:%S%P)\[${DARKGRAY}\])-"
-#	PS1+="(\[${MAGENTA}\]CPU $(cpu)%"
-#	PS1+="\[${DARKGRAY}\]:\[${MAGENTA}\]\j"
-#	PS1+="\[${DARKGRAY}\]:\[${MAGENTA}\]Net $(awk 'END {print NR}' /proc/net/tcp)"
-#	PS1+="\[${DARKGRAY}\])-"
-#	PS1+="\[${DARKGRAY}\]:\[${BROWN}\]\w\[${DARKGRAY}\])-"
-#	PS1+="(\[${GREEN}\]$(/bin/ls -lah | /bin/grep -m 1 total | /bin/sed 's/total //')\[${DARKGRAY}\]:"
-#	PS1+="\[${GREEN}\]\$(/bin/ls -A -1 | /usr/bin/wc -l)\[${DARKGRAY}\])"
-#	PS1+="\n"
-#	PS2="\[${DARKGRAY}\]>\[${NOCOLOR}\] "
-#	PS3="Please enter a number from above list: "
-#	PS4="\[${DARKGRAY}\]+\[${NOCOLOR}\] "
-#}
 XDG_CONFIG_HOME="~/.config"
 LIGHTGRAY="\033[0;37m"
 CYAN="\033[0;36m"
@@ -147,13 +74,14 @@ GRAY="\[\033[1;30m\]"
 DARKGRAY="\033[1;30m"
 EMACS=emacs
 PS2="$LIGHT_CYAN>$CYAN>$GRAY>$LIGHT_GRAY "
-PS3="Please enter a number from above list: "
+PS3="Please enter a number from the list above: "
 PS4="\[${DARKGRAY}\]+\[${NOCOLOR}\] "
 echo "####################################################"
 echo -ne "Quote of the terminal:"
 echo
 fortune
 echo "####################################################"
+echo
 hour=$(date +"%H")
 day=$(date +"%B%e")
 year=$(date +"%Y")

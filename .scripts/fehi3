@@ -1,4 +1,5 @@
 #!/bin/sh
 # This script is useful for when your Pictures directory is so huge and you want feh to pick a random file.
-OUTPUT="$(ls /home/dell00/Pictures |shuf -n 1)"
-feh --bg-scale /home/dell00/Pictures/$OUTPUT
+OUTPUT="$(ls ~/Pictures | shuf -n 1)"
+mv $OUTPUT ~/.config/i3/wall.png
+feh --bg-scale ~/.config/i3/$OUTPUT

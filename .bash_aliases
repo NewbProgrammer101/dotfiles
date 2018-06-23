@@ -1,17 +1,15 @@
 # Generic aliases
 #alias tmux="tmux -2"
 #alias upd='sudo emerge --sync'
-alias upg='sudo emerge -avDuN @world'
-alias purge='sudo emerge --rage-clean'
+alias purge='sudo apt-get purge'
 alias brc='nano ~/.bashrc'
-alias search='emerge --search'
-alias ins='sudo emerge -av'
+alias search='apt search'
+alias ins='sudo apt-get install'
 alias ssh="ssh_with_bash"
-alias autorem="sudo emerge -ac"
+alias autorem="sudo apt-get autoremove"
 alias sha1="openssl sha1"
 alias sshd="sudo service sshd start"
 alias sudo="sudo "
-alias loc="sudo find | grep "
 
 ## Maintainence/stuff
 alias disk='du -S | sort -n -r |more'
