@@ -36,7 +36,7 @@ dialog --backtitle "Your Games" --title "Games" --menu " \n" 0 0 0 \
 	d "Quiz" \
 	e "Robots" \
 	f "Sail" \
-	g "Snake" \
+	g "BSD Snake" \
 	h "Worm" \
 	i "GNU Chess" \
 	j "Sudoku" \
@@ -49,7 +49,15 @@ dialog --backtitle "Your Games" --title "Games" --menu " \n" 0 0 0 \
 	q "Backgammon" \
 	r "Battleships" \
 	s "Ski" \
-	x "Exit" 2>"${INPUT}"
+	t "Tornado" \
+	u "Braincurses" \
+	v "Snake" \
+	w "Solitaire" \
+	y "Dwarf Fortress" \
+  z "Nethack Online" \
+  A "Dungeon Crawl" \
+	B "Brogue" \
+  x "Exit" 2>"${INPUT}"
 menuitem=$(<"${INPUT}")
 case $menuitem in
 	F) phear;;
@@ -92,14 +100,22 @@ case $menuitem in
 	j) nsuds;;
 	k) pacman;;
 	l) Game-Of-Nim.sh;;
-	m) Dopewars.sh;;
+	m) dopewars;;
 	n) tomenet;;
 	o) cboard;;
 	p) vms-empire;;
 	q) gnubg;;
 	r) bs;;
 	s) ski;;
-	x) exit 0;;
+	t) tornado;;
+	u) braincurses;;
+	v) gnake;;
+	w) ttysolitaire;;
+	y) dwarf-fortress;;
+  z) /usr/bin/ssh nethack@hardfought.org;;
+  A) crawl;;
+  B) brogue;;
+  x) exit 0;;
 esac
 
 clear &&
