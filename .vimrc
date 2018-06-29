@@ -118,6 +118,7 @@ set smartcase       " ...unless we type a capital
 " ================ Custom Settings ========================
 "so ~/.yadr/vim/settings.vim
 so ~/.vim/deadkeys.vim
+so ~/.vim/zeavim.vim
 nm <F7> :call ToggleDeadKeys()<CR>
 autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
 map <F6> :setlocal spell! spelllang=en_us

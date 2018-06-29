@@ -38,6 +38,7 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
+(global-set-key "\C-cd" 'zeal-at-point)
 (setq explicit-shell-file-name "/bin/bash")
 (setq shell-file-name "/bin/bash")
 (setq TeX-view-program-selection "/usr/bin/fbpdf")
