@@ -26,6 +26,7 @@ set $mute --no-startup-id amixer sset Master toggle
 set $screencast  --no-startup-id "bash ~/.scripts/screencast_pulse"
 set $stoprec --no-startup-id "killall ffmpeg"
 set $irc --no-startup-id hexchat
+set $email $term -e mutt
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -64,6 +65,7 @@ bindsym $mod+Shift+m exec $music
 bindsym $mod+Shift+x exec --no-startup-id "bash ~/.config/i3/lock.sh"
 
 exec $irc
+exec $email
 
 bindsym $mod+Shift+f exec $BROWSER
 
@@ -83,7 +85,7 @@ bindsym $mod+Shift+d exec discord
 bindsym $mod+Escape workspace prev
 bindsym $mod+Shift+Escape exec i3-msg exit
 bindsym $mod+Shift+BackSpace exec $reboot
-bindsym $mod+e exec $term -e mutt
+bindsym $mod+e exec --no-startup-id emacs
 bindsym $mod+y exec $term -e calcurse
 # change focus
 bindsym $mod+$left focus left
