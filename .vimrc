@@ -116,7 +116,7 @@ set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
 " ================ Custom Settings ========================
-"so ~/.yadr/vim/settings.vim
+so ~/.yadr/vim/settings.vim
 so ~/.vim/deadkeys.vim
 so ~/.vim/zeavim.vim
 nm <F7> :call ToggleDeadKeys()<CR>
