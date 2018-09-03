@@ -54,7 +54,8 @@ dialog --backtitle "Your Games" --title "Games" --menu " \n" 0 0 0 \
 	v "Snake" \
 	w "Solitaire" \
 	y "Dwarf Fortress" \
-  z "Nethack Online" \
+  z "Nethack (HardFought)" \
+  C "Nethack (Alt.org)" \
   A "Dungeon Crawl" \
 	B "Brogue" \
   x "Exit" 2>"${INPUT}"
@@ -113,6 +114,7 @@ case $menuitem in
 	w) ttysolitaire;;
 	y) dwarf-fortress;;
   z) /usr/bin/ssh nethack@hardfought.org;;
+  C) /usr/bin/ssh nethack@alt.org;;
   A) crawl;;
   B) brogue;;
   x) exit 0;;

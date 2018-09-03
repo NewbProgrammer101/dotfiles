@@ -23,7 +23,7 @@ set $dec --no-startup-id amixer sset Master 2%-
 set $bigdec --no-startup-id amixer sset Master 5%-
 set $mute --no-startup-id amixer sset Master toggle
 #set $truemute --no-startup-id amixer sset Master mute
-set $screencast  --no-startup-id "bash ~/.scripts/screencast_pulse"
+set $screencast  --no-startup-id "bash ~/.scripts/screencast_alsa.sh"
 set $stoprec --no-startup-id "killall ffmpeg"
 set $irc --no-startup-id hexchat
 set $email $term -e mutt

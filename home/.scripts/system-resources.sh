@@ -30,5 +30,5 @@ echo
 echo "RTC Info:"; cat /proc/driver/rtc
 
 bash ~/.scripts/system-resources.sh > ~/.logs/system.log
-echo "##################################################"
-echo "Reference information found at ~/.logs/system.log"
+echo "###################################################"
+echo "Reference information will be at ~/.logs/system.log"
