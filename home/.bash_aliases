@@ -186,3 +186,4 @@ alias r=ranger
 alias mplayer="mplayer -loop 0 "
 alias mpdf="mupdf-x11"
 alias mp=mplayer
+alias nalt="/usr/bin/ssh nethack@alt.org"
