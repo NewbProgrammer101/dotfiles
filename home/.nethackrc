@@ -4,11 +4,13 @@
 # -------- Player preferences
 ################################################
 OPTIONS=name:Xaleth
-OPTIONS=dogname:Spike
+OPTIONS=dogname:Shotzie
 OPTIONS=catname:Opal
 OPTIONS=horsename:Derpy
 
 OPTIONS=mail
+
+OPTIONS=symset:DECgraphics
 
 ################################################
 # -------- EASE OF PLAY
@@ -24,6 +26,36 @@ OPTIONS=time
 OPTIONS=silent
 OPTIONS=selectsaved
 OPTIONS=news
+## HP
+OPTIONS=hitpointbar
+OPTIONS=hilite_status:hitpoints/100%/grey&normal
+OPTIONS=hilite_status:hitpoints/<100%/green&normal
+OPTIONS=hilite_status:hitpoints/<66%/yellow&normal
+OPTIONS=hilite_status:hitpoints/<50%/orange&normal
+OPTIONS=hilite_status:hitpoints/<33%/red&bold
+OPTIONS=hilite_status:hitpoints/<15%/red&inverse
+## Pw
+OPTIONS=hilite_status:power/100%/grey&normal
+OPTIONS=hilite_status:power/<100%/green&normal
+OPTIONS=hilite_status:power/<66%/yellow&normal
+OPTIONS=hilite_status:power/<50%/orange&normal
+OPTIONS=hilite_status:power/<33%/red&bold
+## Carry
+OPTIONS=hilite_status:cap/burdened/yellow/stressed/orange/strained/red&bold/overtaxed/red&inverse/overloaded/red&inverse&blink
+## Hunger
+OPTIONS=hilite_status:hunger/satiated/yellow/hungry/orange/weak/red&bold/fainting/red&inverse/fainted/red&inverse&blink
+## Mental
+OPTIONS=hilite_status:condition/hallu/yellow
+OPTIONS=hilite_status:condition/conf/orange
+OPTIONS=hilite_status:condition/stun/red&bold
+## Health
+OPTIONS=hilite_status:condition/termill/red&inverse
+OPTIONS=hilite_status:condition/foodpois/red&inverse
+OPTIONS=hilite_status:condition/slime/red&inverse
+# Str, Con, Dex, Int, Wis, Cha
+OPTIONS=hilite_status:characteristics/up/green/down/red
+# gold
+OPTIONS=hilite_status: gold/up/yellow/down/brown
 
 ################################################
 # -------- SEE THINGS BETTER!
@@ -55,7 +87,7 @@ OPTIONS=nouse_darkgray
 # -------- Files/Saves
 ################################################
 ## Allow saving and loading bones files.
-OPTIONS=bones
+#OPTIONS=bones
 
 
 ################################################
@@ -525,18 +557,9 @@ MSGTYPE=hide "You carefully open the .* named .*"
 # Adapted from https://alt.org/nethack/userdata/t/tjr4/tjr4.nh343rc
 
 # pickup / drop /floor /shop items
-MSGTYPE=norep "You see here a.*"
 MSGTYPE=hide "You drop .*"
-MSGTYPE=hide ".?For you, good .*; only .* for this .*"
-MSGTYPE=hide "Fine goods for sale:"
-MSGTYPE=hide ".?Thank you for shopping in .*"
+MSGTYPE=hide "You swap places with your .*"
 MSGTYPE=norep "You have a little trouble lifting .*" 
-MSGTYPE=hide "Your credit is reduced by .* zorkmid*."
-MSGTYPE=hide "The .* will cost you * zorkmids."
-MSGTYPE=hide ".?For you, .*; only .*"
-MSGTYPE=norep "The .* named .* will cost you .* zorkmids."
-MSGTYPE=hide "You bought .*"
-MSGTYPE=hide "You sold .*"
 
 # Hide msgs for any +X 
 # MSGTYPE=hide "You put a +0 .* into the bag .* holding named .*"
