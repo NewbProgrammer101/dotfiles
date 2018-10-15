@@ -5,6 +5,8 @@
 #	"v" for vga screen only,
 #	or "d" for dual vga/laptop.
 
+# TODO: make user decide which ones go left of which and which ones go right of which.
+
 d() { if [[ $(xrandr -q | grep VGA1\ con) ]]
 	then param $1
 	else echo "No VGA input detected."
