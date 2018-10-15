@@ -1,8 +1,6 @@
 #!/bin/bash
 # fifteen.sh
 
-tty -s; if [ $? -ne 0 ]; then gnome-terminal -e "$0"; exit; fi
-
 # Classic "Fifteen Puzzle"
 # Author: Antonio Macchi
 # Lightly edited and commented by ABS Guide author.
@@ -21,12 +19,12 @@ tty -s; if [ $? -ne 0 ]; then gnome-terminal -e "$0"; exit; fi
 #                 ----------------
 
 
-#######################
-# Constants           #
-  SQUARES=16          #
-  FAIL=70             #
-  E_PREMATURE_EXIT=80 #
-#######################
+#####################
+# Constants         #
+SQUARES=16          #
+FAIL=70             #
+E_PREMATURE_EXIT=80 #
+#####################
 
 
 ########
