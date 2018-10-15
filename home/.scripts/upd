@@ -1,20 +1,27 @@
 #!/bin/bash
 
-EMERGE="apt-get update"
-EMERGE_UPDATE="apt-get upgrade"
+UPDATE="apt-get update"
+UPGRADE="apt-get upgrade"
 CHOICE="$1"
 
-echo "Do you want to sync Portage? (Case sensitive) [Y/n]: "
+echo "Do you want to update your package list? (Case sensitive) [Y/n]: "
 read $CHOICE
 
 if [ "$CHOICE" == "Y" ]; then
-	sudo $EMERGE
+	sudo $UPDATE
+elif [ "$CHOICE" == "n" ]; then
+	echo -ne "Ok."
+else
+	echo -ne "I'm sorry, I don't think I understand."
 fi
 
-
-echo "Do you want to update your system? (Case sensitive) [Y/n]: "
+echo "Do you want to upgrade your system? (Case sensitive) [Y/n]: "
 read $CHOICE
 
 if [ "$CHOICE" == "Y" ]; then
-	sudo $EMERGE_UPDATE
+	sudo $UPGRADE
+elif [ "$CHOICE" == "n" ]; then
+	echo -ne "Ok."
+else
+	echo -ne "At least I feel good about your typing incompetence."
 fi
