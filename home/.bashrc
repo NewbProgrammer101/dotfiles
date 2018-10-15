@@ -6,7 +6,6 @@ iatest=$(expr index "$-" i)
 [ -z "$PS1" ] && return
 
 # don't put duplicate lines in the history. See bash(1) for more options
-# don't overwrite GNU Midnight Commander's setting of `ignorespace'.
 HISTCONTROL=$HISTCONTROL${HISTCONTROL+:}ignoredups
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -23,7 +22,9 @@ FRED="\[\033[31m\]" # foreground red
 FCYN="\[\033[36m\]" # foreground cyan
 
 if [ $UID = 0 ]; then
-	PS1="$HC$FRED\u@\h:$FBLE\w$RS # "
+	export PS1="$HC$FRED\u@\h:$FBLE\w$RS # "
+else
+	export PS1="\[\033[0;37m\]\[[\033[0;36m\]\u\[\033[0;37m\]]\342\224\200[\[\033[0;31m\]\h\[\033[0;37m\]]\342\224\200[\[\033[0;32m\]\w\[\033[0;37m\]]\n\[\033[0;37m\]\342\224\224\342\224\200\342\224\200\342\225\274\[\033[0m\]"
 fi
 # enable bash completion in interactive shells
 if ! shopt -oq posix; then
@@ -46,15 +47,11 @@ export LESS_TERMCAP_so=$'\E[01;44;37m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 #export MAIL="~/Mail/countolaf17@gmail.com/INBOX"
-HISTSIZE=2000
+HISTSIZE= HISTSIZE= # Infinite.
 HISTCONTROL=ignoreboth
 HISTTIMEFORMAT="%F %T"
 HISTIGNORE='&:[ ]*'
-HISTFILESIZE=2000
-export BROWSER="firefox"
-export EDITOR="vim"
-export VISUAL=$EDITOR
-export PAGER="/usr/bin/less"
+HISTFILESIZE= HISTFILESIZE= # Infinite as well.
 export LESSCHARSET="utf8"
 export LESSOPEN="|/usr/bin/lesspipe %s 2>&-"
 export LESS="-i -N -w	-z-4 -g -e -M -X -F -R -P%t?f%f \
@@ -65,7 +62,6 @@ export PATH="$PATH:~/.scripts"
 #export PATH="$PATH:~/.vim/bundle/vim-live-latex-preview/bin"
 export PATH="$PATH:~/.arc/arcanist/bin/"
 export INPUTRC="~/.inputrc"
-PS1="\[\033[0;37m\]\[[\033[0;36m\]\u\[\033[0;37m\]]\342\224\200[\[\033[0;31m\]\h\[\033[0;37m\]]\342\224\200[\[\033[0;32m\]\w\[\033[0;37m\]]\n\[\033[0;37m\]\342\224\224\342\224\200\342\224\200\342\225\274\[\033[0m\]"
 XDG_CONFIG_HOME="~/.config"
 LIGHTGRAY="\033[0;37m"
 CYAN="\033[0;36m"
