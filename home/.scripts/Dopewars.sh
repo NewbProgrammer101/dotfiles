@@ -1,7 +1,5 @@
 #!/bin/bash
 
-tty -s; if [ $? -ne 0 ]; then gnome-terminal -e "$0"; exit; fi
-
 MENUINPUT="" # This is re-used for every 'read' input, so if you ever need to store it's contents outside of a loop you'll need to create more dedicated 'read' variables or store the input somewhere else.
 BANK="0"
 DAYCOUNTER="1" # The next day function sets this - never write to it, only read it!
