@@ -1,8 +1,6 @@
 #!/bin/bash -i
 # petals.sh
 
-tty -s; if [ $? -ne 0 ]; then gnome-terminal -e "$0"; exit; fi
-
 #########################################################################
 # Petals Around the Rose                                                #
 #                                                                       #
@@ -55,17 +53,17 @@ instructions () {
     echo -e '\E[34;47m'  # Blue type.
 
 #  "cat document"
-    cat <<INSTRUCTIONSZZZ
+    cat > instructions << "EOF"
 The name of the game is Petals Around the Rose,
 and that name is significant.
 Five dice will roll and you must guess the "answer" for each roll.
 It will be zero or an even number.
 After your guess, you will be told the answer for the roll, but . . .
-that's ALL the information you will get.
+that is ALL the information you will get.
 
 Six consecutive correct guesses admits you to the
 Fellowship of the Rose.
-INSTRUCTIONSZZZ
+EOF
 
     echo -e "\033[0m"    # Turn off blue.
     else clear
