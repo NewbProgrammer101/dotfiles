@@ -113,11 +113,11 @@ case $menuitem in
 	v) gnake;;
 	w) ttysolitaire;;
 	y) dwarf-fortress;;
-  z) /usr/bin/ssh nethack@hardfought.org;;
-  C) /usr/bin/ssh nethack@alt.org;;
-  A) crawl;;
-  B) brogue;;
-  x) exit 0;;
+	z) /usr/bin/ssh nethack@hardfought.org;;
+  	C) /usr/bin/ssh nethack@alt.org;;
+  	A) crawl;;
+  	B) brogue;;
+  	x) exit 0;;
 esac
 
 clear &&
