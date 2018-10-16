@@ -4,24 +4,20 @@ UPDATE="apt-get update"
 UPGRADE="apt-get upgrade"
 CHOICE="$1"
 
-echo "Do you want to update your package list? (Case sensitive) [Y/n]: "
+echo "Do you want to update your package list? [Y/n]: "
 read $CHOICE
 
-if [ "$CHOICE" == "Y" ]; then
-	sudo $UPDATE
-elif [ "$CHOICE" == "n" ]; then
-	echo -ne "Ok."
-else
-	echo -ne "I'm sorry, I don't think I understand."
-fi
+case "$CHOICE" in
+	[yY1] ) sudo $UPDATE
+	[nN0] ) echo -ne "Ok."
+	* ) echo -ne "I'm sorry, I don't think I understand."
+esac
 
-echo "Do you want to upgrade your system? (Case sensitive) [Y/n]: "
+echo "Do you want to upgrade your system? [Y/n]: "
 read $CHOICE
 
-if [ "$CHOICE" == "Y" ]; then
-	sudo $UPGRADE
-elif [ "$CHOICE" == "n" ]; then
-	echo -ne "Ok."
-else
-	echo -ne "At least I feel good about your typing incompetence."
-fi
+case "$CHOICE" in
+	[yY1] ) sudo $UPGRADE
+	[nN0] ) echo -ne "Ok."
+	* ) echo -ne "At least I feel good about your typing incompetence."
+esac
