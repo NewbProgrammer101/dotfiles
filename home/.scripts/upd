@@ -8,16 +8,16 @@ echo "Do you want to update your package list? [Y/n]: "
 read $CHOICE
 
 case "$CHOICE" in
-	[yY1] ) sudo $UPDATE
-	[nN0] ) echo -ne "Ok."
-	* ) echo -ne "I'm sorry, I don't think I understand."
+	[yY1] ) sudo $UPDATE;;
+	[nN0] ) echo -ne "Ok.";;
+	* ) echo -ne "I'm sorry, I don't think I understand.";;
 esac
 
 echo "Do you want to upgrade your system? [Y/n]: "
 read $CHOICE
 
 case "$CHOICE" in
-	[yY1] ) sudo $UPGRADE
-	[nN0] ) echo -ne "Ok."
-	* ) echo -ne "At least I feel good about your typing incompetence."
+	[yY1] ) sudo $UPGRADE;;
+	[nN0] ) echo -ne "Ok.";;
+	* ) echo -ne "At least I feel good about your typing incompetence.";;
 esac
