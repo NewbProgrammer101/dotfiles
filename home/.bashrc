@@ -2,6 +2,9 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 iatest=$(expr index "$-" i)
+
+# Disable Ctrl-S and Ctrl-Q. Useful for my tmux config.
+stty -ixon
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
