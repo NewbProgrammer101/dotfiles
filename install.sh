@@ -5,10 +5,10 @@
 INPUT=$1
 
 function install_dotfiles {
-  echo "Copying custom files to home directory..."
+  echo -ne "Copying custom files to home directory..."
   cp -rv home/.* $HOME/
   cp -rv home/misc/.* $HOME/
-  echo "Copying files to system-wide config... (Needs password)"
+  echo -ne "Copying files to system-wide config... (Needs password)"
   sudo cp -rv etc/* /etc/
 }
 
@@ -17,5 +17,5 @@ read $INPUT
 
 case $INPUT in
   [Y] ) install_dotfiles;;
-  [n] ) echo "Ok. Good choice.";;
+  [n] ) echo -ne "Ok. Good choice.";;
 esac
