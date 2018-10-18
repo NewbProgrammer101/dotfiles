@@ -1,17 +1,32 @@
 #!/bin/bash
 
-UPDATE="apt-get update"
-UPGRADE="apt-get upgrade"
-CHOICE="$1"
+UPDATE="emerge --sync"
+UPGRADE="emerge -avDuN @world"
+CHOICE=$1
+
+echo "What package manager do you want?"
+echo "Press 0 for Portage, 1 for dpkg: "
+read $CHOICE
+
+#case $CHOICE in
+#  [0] ) UPDATE="emerge --sync"
+#        UPGRADE="emerge -avDuN @world";;
+#  [1] ) UPDATE="apt-get update"
+#        UPGRADE="apt-get upgrade";;
+#esac
 
 echo "Do you want to update your package list? [Y/n]: "
 read $CHOICE
 
-if [ "${CHOICE}" = "Y" ]; then
-  sudo $UPDATE
-fi
+case $CHOICE in
+  [Y] ) sudo $UPDATE;;
+  [n] ) echo "Ok.";;
+esac
 
 echo "Do you want to upgrade your system? [Y/n]: "
 read $CHOICE
 
-
+case $CHOICE in
+  [Y] ) sudo $UPGRADE;;
+  [n] ) echo "y u execute dis script in da first place??";;
+esac
