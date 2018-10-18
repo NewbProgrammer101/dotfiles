@@ -6,3 +6,7 @@ sudo apt-get install fortune abook mutt weechat calcurse i3* nethack wget emacs 
 ```
 
 For maximum experience from the dotfiles.
+
+## Installation
+
+Execute `bash install.sh` at the root of this repository.

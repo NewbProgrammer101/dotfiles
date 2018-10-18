@@ -7,23 +7,11 @@ CHOICE="$1"
 echo "Do you want to update your package list? [Y/n]: "
 read $CHOICE
 
-case "$CHOICE" in
-	[yY1] ) sudo $UPDATE;;
-	[nN0] ) echo -ne "Ok.";;
-	* ) echo -ne "I'm sorry, I don't think I understand.";;
-esac
-if [ -z "$CHOICE" ]; then
-	sudo $UPDATE
+if [ "${CHOICE}" = "Y" ]; then
+  sudo $UPDATE
 fi
 
 echo "Do you want to upgrade your system? [Y/n]: "
 read $CHOICE
 
-case "$CHOICE" in
-	[yY1] ) sudo $UPGRADE;;
-	[nN0] ) echo -ne "Ok.";;
-	* ) echo -ne "At least I feel good about your typing incompetence.";;
-esac
-if [ -z "$CHOICE" ]; then
-	sudo $UPDATE
-fi
+
