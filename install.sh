@@ -16,6 +16,6 @@ echo -ne "Are you sure you want to copy someone's personal configs to your setup
 read $INPUT
 
 case $INPUT in
-  [Y] ) install_dotfiles;;
-  [n] ) echo "Ok. Good choice.";;
+  Y) install_dotfiles;;
+  n) echo "Ok. Good choice.";;
 esac
