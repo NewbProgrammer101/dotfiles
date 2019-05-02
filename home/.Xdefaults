@@ -1,8 +1,11 @@
-urxvt*transparent:true
-urxvt*shading:30
-urxvt*borderless:true
+URxvt*inheritPixmap: true
+URxvt*transparent: true
+URxvt.shading: 60
+URxvt*depth: 32
+urxvt*borderless: true
 urxvt.background: black
 urxvt.foreground: white
+URxvt*scrollBar: false
 urxvt.color0:	#000000
 urxvt.color1:	#B40000
 urxvt.color2:	#00AA00
@@ -19,7 +22,7 @@ urxvt.color12:	#6464FF
 urxvt.color13:	#FF00FF
 urxvt.color14:	#00FFFF
 urxvt.color15:	#FFFFFF
-urxvt*font: xft:Monospace:pixelsize=11:antialias=true
+urxvt*font: xft:Monospace:pixelsize=11:antialias=false
 urxvt*imLocale:en_US.utf8
 urxvt*multichar_encoding:utf8
 urxvt*keysym.sym: string
